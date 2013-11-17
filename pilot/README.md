@@ -6,5 +6,9 @@
 ## **code_reads.py**
 - attach the barcode bases to the description of each read
 - launched on SGE by **code.sh**
+
 ## **align.sh**
 - use bowtie2 to map reads
+
+## **mark_duplicates.py**
+- remove duplicate reads, keeping the one with the highest mean quality
