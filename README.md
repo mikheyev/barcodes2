@@ -24,6 +24,7 @@
 
 ## Now we intersect our high quality parental SNPs with those called from the RAD-tag data
 
+    cd data
     intersectBed -a nodup.vcf -b poly_snps.vcf -wa -sorted > nodup_poly.vcf
     intersectBed -a dup.vcf -b poly_snps.vcf -wa -sorted > dup_poly.vcf
 
