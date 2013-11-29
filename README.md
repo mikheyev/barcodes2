@@ -21,7 +21,7 @@
 ## **call_dup.sh** and **call_nodup.sh**
 - preform SNP calling on duplicated and non-duplicated libraries
 - after snps have been called, they can be intersected with the file produced by **hq_snp.py**
-
+    
     intersectBed -a nodup.vcf -b poly_snps.vcf -wa -sorted > nodup_poly.vcf
     intersectBed -a dup.vcf -b poly_snps.vcf -wa -sorted > dup_poly.vcf
     
