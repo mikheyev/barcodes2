@@ -21,10 +21,12 @@
 ## **call_dup.sh** and **call_nodup.sh**
 - preform SNP calling on duplicated and non-duplicated libraries
 - after snps have been called, they can be intersected with the file produced by **hq_snp.py**
-    
+
+## Now we intersect our high quality parental SNPs with those called from the RAD-tag data
+
     intersectBed -a nodup.vcf -b poly_snps.vcf -wa -sorted > nodup_poly.vcf
     intersectBed -a dup.vcf -b poly_snps.vcf -wa -sorted > dup_poly.vcf
-    
+
 ## **count_errors.py**
 - score correctly marked genotypes in the two vcf files above into a file suitable for analysis by R (**data/errors.csv**)
 
