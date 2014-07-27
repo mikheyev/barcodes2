@@ -35,4 +35,20 @@
 - statistical analysis
     
     
-    
+# Test using yeast
+
+**code_se.sh** and **code_reads_se.py** are yeast-specific versions of the utilities above
+
+	samtools mpileup -ugf dgri/scaffolds.bases merged.bam | bcftools view -vcg - | vcfutils.pl varFilter -Q 20 > merged.vcf
+
+	vcftools --recode --vcf nodup.vcf --remove-indels --max-alleles 2 --minGQ 20 --max-missing-count 1  --out nodup_nomissing
+
+After filtering, kept 482 out of a possible 2870 Sites
+
+	vcftools --recode --vcf dup.vcf --remove-indels --max-alleles 2 --minGQ 20 --max-missing-count 1  --out dup_nomissing
+
+After filtering, kept 443 out of a possible 3958 Sites
+
+	intersectBed -wa -a dup_nomissing.recode.vcf -b nodup_nomissing.recode.vcf > dup_intersect.vcf
+	intersectBed -wa -a nodup_nomissing.recode.vcf -b dup_nomissing.recode.vcf > nodup_intersect.vcf
+
