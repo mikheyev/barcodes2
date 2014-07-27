@@ -1,0 +1,10 @@
+14cycle3615adc2	1
+14cycleDiploid1	2
+14cycleDiploid2	2
+14cycleDiploid3	2
+14cycleSii	1
+18cycle3615adc2	1
+18cycleDiploid1	2
+18cycleDiploid2	2
+18cycleDiploid3	2
+18cycleSii	1
